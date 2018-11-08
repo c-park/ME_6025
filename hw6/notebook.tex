@@ -288,19 +288,28 @@
 
 \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
 
+    \textbf{Note:}
+
+\begin{itemize}
+\tightlist
+\item
+  This was created in a jupyter notebook with a Matlab Kernel extension
+  added to use matlab.
+\end{itemize}
+
     \subsubsection{Problem 3}\label{problem-3}
 
 \textbf{Input Data:}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}1}]:} \PY{n+nb}{rand}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{seed\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{314}\PY{p}{)}\PY{p}{;}
-        \PY{n}{x} \PY{p}{=} \PY{n+nb}{rand}\PY{p}{(}\PY{l+m+mi}{40}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;} \PY{n}{y} \PY{p}{=} \PY{n+nb}{rand}\PY{p}{(}\PY{l+m+mi}{40}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
-        \PY{n}{class} \PY{p}{=} \PY{p}{[} \PY{l+m+mi}{2}\PY{o}{*}\PY{n}{x} \PY{o}{\PYZlt{}} \PY{n}{y}\PY{o}{+}\PY{l+m+mf}{0.5} \PY{p}{]} \PY{o}{+} \PY{l+m+mi}{1} \PY{p}{;}
-        \PY{n}{A1} \PY{p}{=} \PY{p}{[} \PY{n}{x}\PY{p}{(}\PY{n+nb}{find}\PY{p}{(}\PY{n}{class}\PY{o}{==}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)} \PY{p}{,} \PY{n}{y}\PY{p}{(}\PY{n+nb}{find}\PY{p}{(}\PY{n}{class}\PY{o}{==}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)} \PY{p}{]} \PY{p}{;}
-        \PY{n}{A2} \PY{p}{=} \PY{p}{[} \PY{n}{x}\PY{p}{(}\PY{n+nb}{find}\PY{p}{(}\PY{n}{class}\PY{o}{==}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)} \PY{p}{,} \PY{n}{y}\PY{p}{(}\PY{n+nb}{find}\PY{p}{(}\PY{n}{class}\PY{o}{==}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)} \PY{p}{]} \PY{p}{;}
-        \PY{n}{figure}\PY{p}{(}\PY{l+m+mi}{1} \PY{p}{)}\PY{p}{;} \PY{n}{hold} \PY{n}{on} \PY{p}{;}
-        \PY{n}{plot}\PY{p}{(}\PY{n}{A1}\PY{p}{(}\PY{p}{:}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}\PY{p}{,}\PY{n}{A1}\PY{p}{(}\PY{p}{:} \PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{*\PYZsq{}}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{MarkerSize\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{6} \PY{p}{)}\PY{p}{;}
-        \PY{n}{plot}\PY{p}{(}\PY{n}{A2}\PY{p}{(}\PY{p}{:}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}\PY{p}{,}\PY{n}{A2}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{d\PYZsq{}}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{MarkerSize\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{6} \PY{p}{)}\PY{p}{;}
+{\color{incolor}In [{\color{incolor}10}]:} \PY{n+nb}{rand}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{seed\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{314}\PY{p}{)}\PY{p}{;}
+         \PY{n}{x} \PY{p}{=} \PY{n+nb}{rand}\PY{p}{(}\PY{l+m+mi}{40}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;} \PY{n}{y} \PY{p}{=} \PY{n+nb}{rand}\PY{p}{(}\PY{l+m+mi}{40}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
+         \PY{n}{class} \PY{p}{=} \PY{p}{[} \PY{l+m+mi}{2}\PY{o}{*}\PY{n}{x} \PY{o}{\PYZlt{}} \PY{n}{y}\PY{o}{+}\PY{l+m+mf}{0.5} \PY{p}{]} \PY{o}{+} \PY{l+m+mi}{1} \PY{p}{;}
+         \PY{n}{A1} \PY{p}{=} \PY{p}{[}\PY{n}{x}\PY{p}{(}\PY{n+nb}{find}\PY{p}{(}\PY{n}{class}\PY{o}{==}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)} \PY{p}{,} \PY{n}{y}\PY{p}{(}\PY{n+nb}{find}\PY{p}{(}\PY{n}{class}\PY{o}{==}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}\PY{p}{]}\PY{p}{;}
+         \PY{n}{A2} \PY{p}{=} \PY{p}{[}\PY{n}{x}\PY{p}{(}\PY{n+nb}{find}\PY{p}{(}\PY{n}{class}\PY{o}{==}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)} \PY{p}{,} \PY{n}{y}\PY{p}{(}\PY{n+nb}{find}\PY{p}{(}\PY{n}{class}\PY{o}{==}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{p}{]}\PY{p}{;}
+         \PY{n}{figure}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;} \PY{n}{hold} \PY{n}{on}\PY{p}{;}
+         \PY{n}{plot}\PY{p}{(}\PY{n}{A1}\PY{p}{(}\PY{p}{:}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}\PY{p}{,} \PY{n}{A1}\PY{p}{(}\PY{p}{:} \PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{*\PYZsq{}}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{MarkerSize\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{)}\PY{p}{;}
+         \PY{n}{plot}\PY{p}{(}\PY{n}{A2}\PY{p}{(}\PY{p}{:}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}\PY{p}{,} \PY{n}{A2}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{d\PYZsq{}}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{MarkerSize\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{)}\PY{p}{;}
 \end{Verbatim}
 
 
@@ -310,7 +319,7 @@
     \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_2_1.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_3_1.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -319,19 +328,15 @@
 \textbf{Call to CVX:}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}8}]:} \PY{n}{cvx\PYZus{}begin}
-            \PY{n}{variables} \PY{n}{a}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)} \PY{n}{b}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}
-            \PY{n}{A1}\PY{o}{*}\PY{n}{a} \PY{o}{\PYZhy{}} \PY{n}{b} \PY{o}{\PYZgt{}}\PY{p}{=} \PY{l+m+mi}{1}\PY{p}{;}
-            \PY{n}{A2}\PY{o}{*}\PY{n}{a} \PY{o}{\PYZhy{}} \PY{n}{b} \PY{o}{\PYZlt{}}\PY{p}{=} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{;}
-        \PY{n}{cvx\PYZus{}end}
+{\color{incolor}In [{\color{incolor}11}]:} \PY{n}{cvx\PYZus{}begin}
+             \PY{n}{variables} \PY{n}{a}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)} \PY{n}{b}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}
+             \PY{n}{A1}\PY{o}{*}\PY{n}{a} \PY{o}{\PYZhy{}} \PY{n}{b} \PY{o}{\PYZgt{}}\PY{p}{=} \PY{l+m+mi}{1}\PY{p}{;}
+             \PY{n}{A2}\PY{o}{*}\PY{n}{a} \PY{o}{\PYZhy{}} \PY{n}{b} \PY{o}{\PYZlt{}}\PY{p}{=} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{;}
+         \PY{n}{cvx\PYZus{}end}
 \end{Verbatim}
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-Warning: A non-empty cvx problem already exists in this scope.
-   It is being overwritten.
-> In cvxprob (line 28)
-  In cvx\_begin (line 41)
  
 Calling SDPT3 4.0: 40 variables, 3 equality constraints
    For improved efficiency, SDPT3 is solving the dual problem.
@@ -347,14 +352,14 @@ Calling SDPT3 4.0: 40 variables, 3 equality constraints
 it pstep dstep pinfeas dinfeas  gap      prim-obj      dual-obj    cputime
 -------------------------------------------------------------------
  0|0.000|0.000|8.2e+01|9.5e+00|4.0e+03|-4.000000e+02  0.000000e+00| 0:0:00| chol  1  1 
- 1|0.664|0.958|2.7e+01|4.8e-01|1.3e+03|-2.302054e+02  0.000000e+00| 0:0:01| chol  1  1 
- 2|0.947|1.000|1.5e+00|8.6e-03|5.3e+01|-2.867473e+01  0.000000e+00| 0:0:01| chol  1  1 
- 3|0.988|1.000|1.7e-02|8.6e-04|6.4e-01|-3.431845e-01  0.000000e+00| 0:0:01| chol  1  1 
- 4|0.989|1.000|1.9e-04|3.6e-03|7.1e-03|-3.794117e-03  0.000000e+00| 0:0:01| chol  1  1 
- 5|0.989|1.000|2.2e-06|4.7e-05|8.1e-05|-4.272904e-05  0.000000e+00| 0:0:01| chol  1  1 
- 6|0.989|1.000|2.4e-08|4.3e-07|8.9e-07|-4.698507e-07  0.000000e+00| 0:0:01| chol  1  1 
- 7|0.972|1.000|6.7e-10|4.8e-09|2.9e-08|-9.053445e-09  0.000000e+00| 0:0:01| chol  1  1 
- 8|0.970|1.000|2.0e-11|1.3e-10|9.5e-10|-2.134723e-10  0.000000e+00| 0:0:01|
+ 1|0.664|0.958|2.7e+01|4.8e-01|1.3e+03|-2.302054e+02  0.000000e+00| 0:0:00| chol  1  1 
+ 2|0.947|1.000|1.5e+00|8.6e-03|5.3e+01|-2.867473e+01  0.000000e+00| 0:0:00| chol  1  1 
+ 3|0.988|1.000|1.7e-02|8.6e-04|6.4e-01|-3.431845e-01  0.000000e+00| 0:0:00| chol  1  1 
+ 4|0.989|1.000|1.9e-04|3.6e-03|7.1e-03|-3.794117e-03  0.000000e+00| 0:0:00| chol  1  1 
+ 5|0.989|1.000|2.2e-06|4.7e-05|8.1e-05|-4.272904e-05  0.000000e+00| 0:0:00| chol  1  1 
+ 6|0.989|1.000|2.4e-08|4.3e-07|8.9e-07|-4.698507e-07  0.000000e+00| 0:0:00| chol  1  1 
+ 7|0.972|1.000|6.7e-10|4.8e-09|2.9e-08|-9.053445e-09  0.000000e+00| 0:0:00| chol  1  1 
+ 8|0.970|1.000|2.0e-11|1.3e-10|9.5e-10|-2.134723e-10  0.000000e+00| 0:0:00|
   stop: max(relative gap, infeasibilities) < 1.49e-08
 -------------------------------------------------------------------
  number of iterations   =  8
@@ -369,8 +374,8 @@ it pstep dstep pinfeas dinfeas  gap      prim-obj      dual-obj    cputime
  rel. dual     "        "       "      = 0.00e+00
  norm(X), norm(y), norm(Z) = 4.9e-11, 5.8e+01, 8.7e+01
  norm(A), norm(b), norm(C) = 9.2e+00, 1.0e+00, 7.3e+00
- Total CPU time (secs)  = 0.99  
- CPU time per iteration = 0.12  
+ Total CPU time (secs)  = 0.11  
+ CPU time per iteration = 0.01  
  termination code       =  0
  DIMACS: 2.0e-11  0.0e+00  4.9e-10  0.0e+00  -2.1e-10  9.5e-10
 -------------------------------------------------------------------
@@ -383,6 +388,66 @@ Optimal value (cvx\_optval): +2.13472e-10
 
     \end{Verbatim}
 
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}18}]:} \PY{n}{a}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+
+a =
+
+   51.1449
+  -23.5476
+
+
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}13}]:} \PY{n}{b}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+
+b =
+
+   13.9878
+
+
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}20}]:} \PY{n}{x} \PY{p}{=} \PY{n+nb}{linspace}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
+         \PY{n}{y} \PY{p}{=} \PY{p}{(}\PY{n}{b} \PY{o}{\PYZhy{}} \PY{n}{a}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{o}{*}\PY{n}{x}\PY{p}{)}\PY{o}{/}\PY{n}{a}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{;}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}21}]:} \PY{n}{figure}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;} \PY{n}{hold} \PY{n}{on} \PY{p}{;}
+         \PY{n}{plot}\PY{p}{(}\PY{n}{A1}\PY{p}{(}\PY{p}{:}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}\PY{p}{,}\PY{n}{A1}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{*\PYZsq{}}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{MarkerSize\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{6} \PY{p}{)}\PY{p}{;}
+         \PY{n}{plot}\PY{p}{(}\PY{n}{A2}\PY{p}{(}\PY{p}{:}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}\PY{p}{,}\PY{n}{A2}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{d\PYZsq{}}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{MarkerSize\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{6} \PY{p}{)}\PY{p}{;}
+         \PY{n}{plot}\PY{p}{(}\PY{n}{x}\PY{p}{,}\PY{n}{y}\PY{p}{)}\PY{p}{;}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+
+
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_9_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
 
     % Add a bibliography block to the postdoc
     
