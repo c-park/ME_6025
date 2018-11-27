@@ -47,7 +47,7 @@ def gradient_method_backtracking(f,g,x0,s,alpha,beta,epsilon):
         x=x-t*grad
         fun_val=f(x)
         grad=g(x)
-        print('iter_number = '+ str(iter) + ' norm_grad = ' + str(norm(grad)) + ' fun_val = ' + str(fun_val))
+        #print('iter_number = '+ str(iter) + ' norm_grad = ' + str(norm(grad)) + ' fun_val = ' + str(fun_val))
     return x,fun_val
 
 
@@ -74,7 +74,7 @@ def gradient_method_quadratic(A,b,x0,epsilon):
         x=x-t*grad
         grad=2*(A@x+b)
         fun_val=x@A@x+2*b@x
-        print('iter_number = '+ str(iter) + ' norm_grad = ' + str(norm(grad)) + ' fun_val = ' + str(fun_val))
+        #print('iter_number = '+ str(iter) + ' norm_grad = ' + str(norm(grad)) + ' fun_val = ' + str(fun_val))
     return x,fun_val
 
 
@@ -103,7 +103,7 @@ def gradient_scaled_quadratic(A,b,D,x0,epsilon):
         x=x-t*D@grad
         grad=2*(A@x+b)
         fun_val=x@A@x+2*b@x
-        print('iter_number = '+ str(iter) + ' norm_grad = ' + str(norm(grad)) + ' fun_val = ' + str(fun_val))
+        #print('iter_number = '+ str(iter) + ' norm_grad = ' + str(norm(grad)) + ' fun_val = ' + str(fun_val))
     return x,fun_val
 
 
@@ -141,7 +141,7 @@ def newton_backtracking(f,g,h,x0,alpha,beta,epsilon):
             t=beta*t
         x=x-t*d
         fun_val = f(x)
-        print('iter_number = '+ str(iter) + ' fun_val = ' + str(fun_val))
+        #print('iter_number = '+ str(iter) + ' fun_val = ' + str(fun_val))
         gval=g(x)
         hval=h(x)
         d=np.linalg.solve(hval,gval)
